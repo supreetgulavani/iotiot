@@ -1,0 +1,44 @@
+-Linear Algebra is a field that is a prerequisite to machine learning.
+-'Mathematics of data'; Matrices and vectors are the 'language of data'.
+
+=>Expected Value and Mean
+  - The average value of a random variable X is 'expected value'(E). >>E(X)
+  - Calculated as the probability weighted sum of values that can be drawn
+               E(X) = ∑x1*p1,x2*p2,x3*p3,...,xn*pn
+  - Mean is denoted as μ, calculated from sample observations, rather than all possible values
+                μ = 1/n * ∑x1,x2,x3,...,xn
+                μ = P(x)* ∑x
+            where x = vaector of observations; P(x) = calculated probability for each value
+  - If calculated for a specific variable, mean is denoted as x-bar
+      
+ # vector mean
+from numpy import array
+from numpy import mean
+# define vector
+v = array([1,2,3,4,5,6])
+print(v)
+# calculate mean
+result = mean(v)
+print(result)        
+
+-Mean function can calculate the row and column means of matrix by specifying the axis argument and value 0 or 1 
+# matrix_means
+from numpy import array
+from numpy import mean
+# define matrix
+M = array([
+[1,2,3,4,5,6],
+[1,2,3,4,5,6]])
+print(M)
+# column_means
+col_mean = mean(M, axis=0)
+print(col_mean)
+# row_means
+row_mean = mean(M, axis=1)
+print(row_mean)
+
+=> Variance and Standard Deviation
+    - Random variable X is a measure of how much values in the distribution vary on average with respect to the mean.
+              Var[X]
+    - Variance is calculated as the average squared dierence of each value in the distribution from the expected value
+    - 

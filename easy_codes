@@ -1,0 +1,66 @@
+#BASIC CODES IN PYTHON
+
+sample = "john,plastic,joe"
+split_list = sample.split(",")  #splits the string
+print(split_list)
+
+x = "python"
+y = "amazing"
+print(x[1:4])   # print from y to h
+print(x+y)      #concatenates the two strings
+print(x.replace("t","y"))   #replaces t with y
+
+
+print(9//2)     #prints 4
+
+list_1 = ["not","really", "but", "okay"]    #creates a list use []
+print(list_1[1])
+print(len(list_1))              #gives the length of the list
+list_1.append("yeyey")          #adds the element in the list
+print(list_1)
+if "not" in list_1:
+    print("SUCCESS")
+
+
+tup_1 = (1,2)   #creates a tuple use ()
+print(tup_1)
+
+dict_1 = {"oui":"yes","int":1,"fl":34}  #creates a dictionary use {} and assign some value to the elements
+print(dict_1["oui"])
+print("oui" in dict_1)  #gives truth value
+
+set_1 = {"yes", "no", "gray"}   #creates a set use{}
+print(set_1)
+
+L1= [1,2,3,4,5,6]
+L2= [4,5,6,7]
+
+print(set(L1)-set(L2))        #treats the list as a set  
+
+for i in L1:
+    if i not in L2:
+        print(i)
+
+print(set(L1).intersection(L2))     #intersection of two lists
+
+print(set(L1).union(L2))            #union of two lists
+
+
+def SumList(a,b):                   #creates a function with 2 args a and b
+    c = []                          #empty list
+    while(len(b)>len(a)):           
+        a.append(0)                 #add 0s to the list a
+    while(len(a)>len(b)):
+        b.append(0)                 #add 0s to the list b
+    for i in range(0,len(b)):       #iterates i in range from 0 to length of b
+        c.append(a[i]+b[i])         #adds the sum of lists a and b to list c
+    return c                        #returns c
+
+a = list(map(int, input("Enter the elements").split()))    #creates a list by taking the input from the user datatype int
+b = list(map(int, input("Enter the elements").split()))
+print(SumList(a,b))                 #print from the function
+
+a = [1,2,3,4,5,6]               #created a list
+slice_obj = slice(0,4)          #use the slice function to slice the objects    
+print(a[slice_obj])             #print the sliced array
+

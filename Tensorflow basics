@@ -1,0 +1,23 @@
+- A tensor is the generalization of vectors and matrices to potentially higher dimensions
+- When writing a TensorFlow program, the main object you manipulate and pass around is the 'tf.Tensor'.
+- A 'tf.Tensor' object represents a partially defined computation that will eventually produce a value.
+- Build a graph and run its parts to achieve the desired output.
+- A tensor has : A datatype, shape.
+- All elements have same datatype
+
+** Rank : number of dimensions
+- Get rank: get_rank = tf.rank(my_code)
+
+** Shape : number of elements in each direction
+- Get shape: get_shape = tf.shape(my_code)
+
+# Variables
+
+- Create variable: crt_variable = tf.get_variable("crt_variable",[3,4,5])
+** Collection :  named lists of tensors
+ two collections: 
+ 1. tf.GraphKeys.GLOBAL_VARIABLES 
+ 2. tf.GraphKeys.TRAINABLE_VARIABLES 
+If you don't want it to be trainable, store it to tf.GraphKeys.LOCAL_VARIABLES 
+
+
